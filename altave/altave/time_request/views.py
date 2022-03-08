@@ -1,6 +1,8 @@
 from django.http import HttpResponse
+import datetime
 
 # Create your views here.
 
 def home(request):
-    return HttpResponse("It's time Request")
+    now = datetime.datetime.now()
+    return HttpResponse(f'Its time Request {now}')
